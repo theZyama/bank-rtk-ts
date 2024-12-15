@@ -1,9 +1,9 @@
-import {useSelector} from "react-redux";
-import {RootState} from "../app/store.ts";
+
+import {useAppSelector} from "../app/hooks.ts";
 
 const Balance = () => {
-    const balance = useSelector<RootState, number>(state => state.balance);
-    const quote = useSelector<RootState, string>(state => state.quote);
+    const balance = useAppSelector(state => state.balance);
+    const quote = useAppSelector(state => state.quote);
 
     return (
         <div className={'text-center text-uppercase'}>

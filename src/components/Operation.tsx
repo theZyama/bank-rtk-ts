@@ -1,12 +1,12 @@
 import {useState} from "react";
-import {useDispatch} from "react-redux";
 import {deposit, withdraw} from "../features/account/balanceSlice.ts";
 import {fetchQuote} from "../features/api/quoteAction.ts";
 import {AppDispatch} from "../app/store.ts";
+import {useAppDispatch} from "../app/hooks.ts";
 
 const Operation = () => {
     const [sum, setSum] = useState(1);
-    const dispatch: AppDispatch = useDispatch();
+    const dispatch: AppDispatch = useAppDispatch();
 
     return (
         <>
